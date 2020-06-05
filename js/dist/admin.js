@@ -225,6 +225,10 @@ module.exports =
           return [m(StringItem, {
             key: "fly3949-sso.secret_key"
           }, app.translator.trans('fly3949-sso.admin.settings.secret_key')), m(StringItem, {
+            key: "fly3949-sso.signup_url"
+          }, app.translator.trans('fly3949-sso.admin.settings.signup_url')), m(StringItem, {
+            key: "fly3949-sso.login_url"
+          }, app.translator.trans('fly3949-sso.admin.settings.login_url')), m(StringItem, {
             key: "fly3949-sso.logout_url"
           }, app.translator.trans('fly3949-sso.admin.settings.logout_url')), m("div", {
             className: "Form-group"

@@ -16,6 +16,12 @@ export default class SSOSettingsModal extends SettingsModal {
       <StringItem key="fly3949-sso.secret_key">
         {app.translator.trans('fly3949-sso.admin.settings.secret_key')}
       </StringItem>,
+      <StringItem key="fly3949-sso.signup_url">
+        {app.translator.trans('fly3949-sso.admin.settings.signup_url')}
+      </StringItem>,
+      <StringItem key="fly3949-sso.login_url">
+        {app.translator.trans('fly3949-sso.admin.settings.login_url')}
+      </StringItem>,
       <StringItem key="fly3949-sso.logout_url">
         {app.translator.trans('fly3949-sso.admin.settings.logout_url')}
       </StringItem>,

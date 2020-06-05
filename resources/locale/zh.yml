@@ -3,6 +3,8 @@ fly3949-sso:
     settings:
       title: "SSO 设置"
       secret_key: "Secret Key"
+      signup_url: "注册跳转 URL"
+      login_url: "登录跳转 URL"
       logout_url: "退出后跳转 URL"
       disable_login_btn: "隐藏登录按钮"
       disable_signup_btn: "隐藏注册按钮"
