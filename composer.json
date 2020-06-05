@@ -11,27 +11,27 @@
     },
     "authors": [
         {
-      "name": "Fly3949",
-      "email": "i@iifly.cn",
-      "role": "Developer"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Fly3949\\SSO\\": "src/"
-    }
-  },
-  "extra": {
-    "flarum-extension": {
-      "title": "Flarum SSO",
-      "icon": {
-          "name": "fas fa-key",
-          "backgroundColor": "#1989fa",
-          "color": "#fff"
-      }
+            "name": "Fly3949",
+            "email": "i@iifly.cn",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fly3949\\SSO\\": "src/"
+        }
     },
-    "flagrow": {
-      "discuss": ""
+    "extra": {
+        "flarum-extension": {
+            "title": "Flarum SSO",
+            "icon": {
+                "name": "fas fa-key",
+                "backgroundColor": "#1989fa",
+                "color": "#fff"
+            }
+        },
+        "flagrow": {
+            "discuss": ""
+        }
     }
-  }
 }
