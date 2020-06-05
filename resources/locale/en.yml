@@ -1,0 +1,8 @@
+fly3949-sso:
+  admin:
+    settings:
+      title: "SSO Settings"
+      secret_key: "Secret Key"
+      logout_url: "Logout URL"
+      disable_login_btn: "Disable login button"
+      disable_signup_btn: "Disable sign up button"

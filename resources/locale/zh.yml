@@ -1,0 +1,8 @@
+fly3949-sso:
+  admin:
+    settings:
+      title: "SSO 设置"
+      secret_key: "Secret Key"
+      logout_url: "退出后跳转 URL"
+      disable_login_btn: "隐藏登录按钮"
+      disable_signup_btn: "隐藏注册按钮"

@@ -4,6 +4,7 @@
 namespace Fly3949\SSO\Controllers;
 
 use Exception;
+use Flarum\Settings\SettingsRepositoryInterface;
 use Fly3949\SSO\Services\UserRegisterService;
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -12,28 +13,41 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class SsoController implements RequestHandlerInterface
 {
+    /**
+     * @var UserRegisterService
+     */
     private $registerService;
 
-    public function __construct(UserRegisterService $registerService)
+    /**
+     * @var SettingsRepositoryInterface
+     */
+    protected $settings;
+
+    /**
+     * SsoController constructor.
+     * @param UserRegisterService $registerService
+     * @param SettingsRepositoryInterface $settings
+     */
+    public function __construct(UserRegisterService $registerService, SettingsRepositoryInterface $settings)
     {
         $this->registerService = $registerService;
+        $this->settings = $settings;
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     * @throws Exception
+     */
     public function handle(Request $request): Response
     {
-        // TODO: get secret key by settings.
-        $secret = '';
-
-        try {
-            $query = $request->getQueryParams();
-            $email = $query['email'];
-            $id = $query['id'];
-            $username = $query['username'];
-            $time = $query['time'];
-            $signature = $query['signature'];
-        } catch (Exception $e) {
-            throw new Exception($e->getMessage());
-        }
+        $secret = $this->settings->get('fly3949-sso.secret_key');
+        $query = $request->getQueryParams();
+        $email = $query['email'];
+        $id = $query['id'];
+        $username = $query['username'];
+        $time = $query['time'];
+        $signature = $query['signature'];
 
         if ($signature != hash_hmac('sha256', $email . $id . $username . $time, $secret)) {
             throw new Exception("wrong signature");
