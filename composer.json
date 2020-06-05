@@ -18,7 +18,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Fly\\SSO\\": "src/"
+      "Fly3949\\SSO\\": "src/"
     }
   },
   "extra": {
