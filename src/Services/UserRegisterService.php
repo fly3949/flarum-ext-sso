@@ -106,7 +106,7 @@ class UserRegisterService
         event(new LoggedIn($user, $token));
 
         return [
-//            'token' => $token->token,
+            'token' => $token->token,
             'userId' => $user->id
         ];
     }

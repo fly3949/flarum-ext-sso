@@ -42,6 +42,6 @@ class SsoController implements RequestHandlerInterface
         $session = $request->getAttribute('session');
         $this->registerService->registerAndLogin($session, $username, $email);
 
-        return new HtmlResponse('<h1>Loading...</h1><script>window.location.href = \'/\'</script>');
+        return new HtmlResponse('<html lang="en"><head><title>Loading...</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"></head><body><h1>Loading...</h1><script>window.location.href = "/"</script></body></html>');
     }
 }
