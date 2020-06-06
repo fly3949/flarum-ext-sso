@@ -1,12 +1,12 @@
 # Flarum SSO
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fly/flarum-ext-sso.svg)](https://packagist.org/packages/fly3949/flarum-ext-sso)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/fly3949/flarum-ext-sso.svg)](https://packagist.org/packages/fly3949/flarum-ext-sso)
 
 A [Flarum](http://flarum.org) extension. A SSO extension for flarum.
 
 ### !!! Attention !!!
 
-It is NOT fully tested. DON'T install it in production.
+It is NOT fully tested. Do NOT install it in production.
 
 ### Installation
 
